@@ -1,0 +1,5 @@
+```properties
+-Dhadoop.version=2.2.0
+-Dhadoop.version=2.3.0
+-Dhadoop.version=2.4.0
+```

@@ -1,0 +1,71 @@
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# These allow the documentation to be updated with new releases of Alluxio.
+ALLUXIO_RELEASED_VERSION: 1.5.0
+# For example, "master" for the master branch, and 1.1 for 1.1.x releases and release candidates.
+ALLUXIO_MASTER_VERSION_SHORT: 1.5.0
+# We must inline the version string (e.g., "1.4.0-SNAPSHOT") rather than using the macro defined above.
+# Otherwise the macro name remains in the output.
+ALLUXIO_CLIENT_JAR_PATH: /<PATH_TO_ALLUXIO>/client/default/alluxio-1.5.0-default-client.jar
+ALLUXIO_CLIENT_JAR_PATH_BUILD: /<PATH_TO_ALLUXIO>/core/client/runtime/target/alluxio-core-client-runtime-1.5.0-jar-with-dependencies.jar
+ALLUXIO_CLIENT_JAR_PATH_FLINK: /<PATH_TO_ALLUXIO>/client/flink/alluxio-1.5.0-flink-client.jar
+ALLUXIO_CLIENT_JAR_PATH_HADOOP: /<PATH_TO_ALLUXIO>/client/hadoop/alluxio-1.5.0-hadoop-client.jar
+ALLUXIO_CLIENT_JAR_PATH_PRESTO: /<PATH_TO_ALLUXIO>/client/presto/alluxio-1.5.0-presto-client.jar
+ALLUXIO_CLIENT_JAR_PATH_SPARK: /<PATH_TO_ALLUXIO>/client/spark/alluxio-1.5.0-spark-client.jar
+
+# These attach the pages of different languages with different 'lang' attributes
+defaults:
+  -
+    scope:
+      path: en
+    values:
+      lang: en
+      languageName: English
+      languagePriority: 0
+  -
+    scope:
+      path: cn
+    values:
+      lang: cn
+      languageName: 中文
+      languagePriority: 1
+  -
+    scope:
+      path: pt
+    values:
+      lang: pt
+      languageName: Português
+      languagePriority: 2
+
+# Each language has a particular version of category names
+# When supporting a new language version, do not change the 'group' attribute in .md page files
+# Instead, just add the group name of that language below
+categoryInfo:
+  User Guide:
+    en: User Guides
+    cn: 用户指南
+    pt: Guias do Usuário
+  Deploying Alluxio:
+    en: Deploying Alluxio
+    cn: 部署Alluxio
+    pt: Deploying Alluxio
+  Features:
+    en: Features
+    cn: 特性
+    pt: Features
+  Frameworks:
+    en: Frameworks
+    cn: 计算框架
+    pt: Frameworks
+  Under Store:
+    en: Under Stores
+    cn: 底层存储系统
+    pt: Under Stores
+  Resources:
+    en: Resources
+    cn: 开发者资源
+    pt: Recursos
